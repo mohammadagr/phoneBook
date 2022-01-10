@@ -1,0 +1,112 @@
+#contacts{
+    width: 80rem;
+    margin: auto;
+}
+.avatarStyles {
+    border: none;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+#contacts th {
+    text-align: center;
+    background-color: #1A374D;
+    color: black;
+    font-size: 1rem;
+}
+
+#contacts th, #contacts td {
+    padding-top: 8px;
+    text-align: center;
+}
+
+.firstColumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+td, th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+    tr:nth-of-type(odd) {
+        background: #eee;
+    }
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid #ccc; }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+    Label the data
+    */
+    td:nth-of-type(1):before { content: "Contact"; }
+    td:nth-of-type(2):before { content: "Email"; }
+    td:nth-of-type(3):before { content: "Company"; }
+    td:nth-of-type(4):before { content: "Phone Number"; }
+    td:nth-of-type(5):before { content: "Action"; }
+    #contacts{
+        width: 30rem;
+        margin: auto;
+    }
+
+    .firstColumn {
+        display: block;
+
+    }
+
+}

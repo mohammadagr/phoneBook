@@ -1,0 +1,19 @@
+.confirmModal-header {
+    background-color: #1A374D;
+    color: white;
+}
+
+.confirmModal-body {
+    background-color: #1A374D;
+    width: 100%;
+    height: 80px;
+    color: white;
+    padding: 20px;
+    align-items: center;
+    align-content: center;
+}
+
+.confirmModal-footer {
+    background-color: #1A374D;
+    border: none;
+}
