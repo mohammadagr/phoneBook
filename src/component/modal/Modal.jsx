@@ -4,6 +4,7 @@ import {Modal, Button} from "react-bootstrap";
 import './modal.css'
 import {faPhoneAlt} from "@fortawesome/free-solid-svg-icons/faPhoneAlt";
 import Form from "./modalForm/form/Form";
+import profile from '../../undraw_profile_pic_ic5t.png'
 
 const idMaker = () => {
     return Math.ceil(Math.random() * 1000)
@@ -23,7 +24,7 @@ export default function UseModal({newUser, setNewUser, setUser, user, show, setS
             setUser([...user, {id: idMaker(), ...newUser}])
         }
 
-        setNewUser({firstName: '', lastName: '', email: '', company: '', phone: ''})
+        setNewUser({image:profile, firstName: '', lastName: '', email: '', company: '', phone: ''})
         setShow(false);
     }
 
@@ -39,7 +40,7 @@ export default function UseModal({newUser, setNewUser, setUser, user, show, setS
                     <Modal.Title>
                         <div className='title-section'>
                         <div >
-                            <img className='avatarStyleModal' src={newUser.image}/>
+                            <img className='avatarStyleModal' src={profile}/>
                         </div>
                         <div>
                             <p>{newUser.firstName} {newUser.lastName}</p>
